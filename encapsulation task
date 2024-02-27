@@ -1,0 +1,22 @@
+using System;
+namespace MyApplication
+{
+class Program
+{
+static void Main(string[] args)
+{
+Student st = new Student();
+st.Grades = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+for (int i = 0; i < st.Grades.Length; i++)
+{
+if (st.Grades[i] % 2 == 0)
+{
+Console.WriteLine(st.Grades[i]);
+}
+}
+}
+}
+class Student
+{
+public int[] Grades { get; set; }
+}
