@@ -36,12 +36,10 @@ where Age>21 and Age<28
 --select * from MyEmployers
 --where Age between 21 and 28
 
-select name,surname,salary
-from MyEmployers
+select name,surname,salary from MyEmployers
 where salary>(select avg(salary)from MyEmployers) --orta emek haqqindan yuksek maas alani tapaq
 
-select name,surname,salary
-from MyEmployers
+select name,surname,salary from MyEmployers
 where salary<(select avg(salary)from MyEmployers)   --orta emek haqqindan asagi alanlari tapaq
 
 
