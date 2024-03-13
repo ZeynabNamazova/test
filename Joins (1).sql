@@ -52,22 +52,25 @@ Telebeler
 Where Name like '%ə%'
 
 --10
+
 alter table Telebeler
 drop column Faculty
 
-Create table Faculties(
-Facultyİd int identity primary key,
+create table Faculties(
+FacultyId int identity primary key,
 FacultyName nvarchar() not null
 )
-alter table Telebeler
-add FacultyId int;
-alter table Telebeler
-add constraint FK_FacultyId foreign key (FacultyId) references Faculties(FacultyId);
 
+alter table Telebeler
+add FacultyId int
 
+update Telebeler
+set FacultyId = Faculties.Id
+from Faculties
+where Telebeler.Faculty = Faculties.FacultyName
 
 --11
-Select Faculty.Name, Telebeler.Id  from 
+Select Faculty.Name,count (Telebeler.Id) from 
 Telebeler join Faculties
 on Telebeler.FacultyId=Faculties.FacultyId
 
