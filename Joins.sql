@@ -33,7 +33,7 @@ where Id=2;
 
 --6
 select count(Id) from Telebeler
-where Faculty=('History')
+where Faculty='History'
 
 --7
 select Name,Surname from Telebeler
@@ -49,7 +49,7 @@ Select Name,Surname from Telebeler
 Where Name like '%a%'
 Select Name,Surname from
 Telebeler
-Where Name like ' %ə%'
+Where Name like '%ə%'
 
 --10
 alter table Telebeler
