@@ -38,7 +38,7 @@ create table Models (
 
 create table BanTypes (
     Id int primary key identity,
-    Type VARCHAR(255)
+    Type nvarchar(50)
 )
 
 create table Colors (
